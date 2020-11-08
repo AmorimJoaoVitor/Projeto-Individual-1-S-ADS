@@ -72,6 +72,12 @@ nav ul {
         font-size: 30px;
         padding-left: 50px;
     }
+    /* .container_sobre {
+        
+    } */
+     .container_sobre img {
+        display: none;
+    }
 }
 
 @media (max-width: 850px){
@@ -149,22 +155,130 @@ header {
     display: flex;
     justify-content: space-evenly;
     color: white;
+    border-bottom: #1f681f solid 3px ;
 }
 .container_sobre {
-    width: 50%;
     justify-content: space-evenly;
     flex-direction: column; 
-    font-size: 25px;
-    border-right: rgb(31, 104, 31) solid 3px;
+    font-size: 23px;
+}
+.container_sobre p {
+    width: 575px;
 }
 .sobre img {
     width: 500px;
 }
 .sobre div {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
     align-items: center;
 }
+
 .container_sobre h1 {
-    font-size: 2em;
+    font-size: 35px;
 }
+/* Fim sobre */
+
+/* Inicio beneficios */
+.bene {
+    padding: 15px;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+.beneficios {
+    width: 60%;
+    text-align: left;
+    color: white;
+    border-bottom: rgb(31, 104, 31) solid 3px;
+}
+.beneficios h1 {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+.beneficios p{
+    font-size: 20px;
+}
+/* Fim beneficios */
+/* inicio serviços */
+
+.servicos {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+.box_serv {
+    display: flex;
+}
+.iten_box_serv img {
+width: 100px;
+}
+.iten_box_serv {
+    width: 240px;
+    border: solid 3px #1f681f;
+    border-radius: 36px;
+    margin: 0 10px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+/* fim serviços */
+/* inicio footer */
+.servicos h2 {
+    color: white;
+}
+.logo_rod img {
+    width: 100px;
+}
+.logo_rod {
+    width: 318px;
+    text-align: center; 
+}
+footer {
+    border-top: #1f681f solid 3px;
+    background: #17181a;
+    
+    color: #1f681f;
+    font-family: 'Trispace', sans-serif;
+    
+}
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 212px;
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center;
+}
+.social {
+    text-align: center;
+    width: 330px;
+}
+.social h5 {
+    text-align: center;
+}
+.sugestoes {
+    width: 370px;
+}
+.social img {
+    width: 50px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+/* fim footer */
+
+
+
+
+
 
