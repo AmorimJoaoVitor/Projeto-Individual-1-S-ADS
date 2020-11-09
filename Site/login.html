@@ -21,18 +21,40 @@
         <img src="../Site/Imagens/PedaleComigoLogonovo.png" alt="Logo">
         <ul>
             <li><a href="index.html">Home</a></li>
-            
-            <li><a href="organize.html">Organize uma Pedalada</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="ciclistas.html">Ciclistas Famosos</a></li>
+            <li><a href="autor.html">Autor</a></li>
             <li class="current"><a>Login</a></li>
         </ul>
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
  </nav>
- <header>
-     <h1>Login</h1>
- </header>
+ <div class="login">
+     <div class="login_container">
+         <h1>Login</h1>
+         <form action="">
+             <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Seu email" autocomplete="off">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" placeholder="Sua senha">
+          <button class="submit_button" type="submit">Entrar</button>
+          <a class="link_form" href="#" id="esqueci_senha">Esqueceu a senha?</a>
+         </form>
+         <div class="login_social">
+             <p>
+                 Alternativas de login
+             </p>
+             <div>
+                 <img src="../Site/Imagens/social_fb_facebook_14206.png" alt="">
+                 <img src="../Site/Imagens/gmail_14189.png" alt="">
+                </div>
+         </div>
+         <div class="register">
+             <p>Registre-se abaixo</p>
+             <a class="link_form" href="cadastro.html">Registrar</a>
+         </div>
+     </div>
+ </div>
 </body>
 
 </html>
