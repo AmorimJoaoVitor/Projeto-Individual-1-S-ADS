@@ -299,8 +299,72 @@ form button:hover, form button.active and .link_form.active, .link_form:hover {
 
  }
 
-
-
+/* Fim login */
+/* Inicio ciclistas famosos */
+.famosos{
+    width: 100%;
+    height: 630px;
+    border-bottom: #1f681f solid 3px;  
+    display: flex;
+    justify-content: center;
+    background: url(../Imagens/banner-bike2.jpg) fixed no-repeat;
+    background-size: 100%;
+}
+.famosos img {
+    width: 520px;
+    border: solid #1f681f 2px;
+}
+.container_famosos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    color: #ffffff;
+    justify-content: space-around;
+}
+.container_famosos h4 {
+    padding: 5px 10px;
+    background-color: #1f681f;
+    border-radius: 20px;   
+}
+.container_famosos p {
+    font-size: 20px;
+}
+.eddy{
+    width: 100%;
+    height: 520px;
+    background: url(../Imagens/banner-bike1.jpg) fixed no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.container_eddy img {
+    width: 230px;
+}
+.container_eddy p {
+    width: 50%;
+}
+.container_eddy {
+    width: 95%;
+    
+    display: flex;
+    align-items: center;
+}
+.cont_eddy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.desc_eddy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    color: white;
+}
+.desc_eddy p{
+    font-size: 17px;
+}
 
 /* inicio footer */
 .servicos h2 {
