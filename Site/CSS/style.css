@@ -349,9 +349,9 @@ form button:hover, form button.active and .link_form.active, .link_form:hover {
 .titulo_autor h1 {
     font-size: 30px;
 }
-.conteudo_autor img {
+.imgs_autor {
     width: 300px;
-    
+    border-bottom: 2px #1f681f solid;
 }
 .conteudo_autor {
     width: 100%;
@@ -381,7 +381,17 @@ form button:hover, form button.active and .link_form.active, .link_form:hover {
 .content_historia p {
     font-size: 22px;
 }
-
+.img_autor2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.img_autor2 h5 {
+margin-top: 10px;
+}
+.img_git {
+    width: 180px;
+}
 
 
 /* Fim autor */
