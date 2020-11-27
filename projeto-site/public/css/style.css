@@ -526,6 +526,78 @@ margin-top: 10px;
     color: white;
     font-size: 20px;
 }
+.perfil {
+    height: 1145px;
+    width: 100%;
+    border-bottom: solid green 2px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+.container_perfil {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box_perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    border: solid #1f681f 2px;
+    border-radius: 20px;
+    height: 410px;
+  
+}
+.box_perfil label {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.container_perfil p {
+    width: 70%;
+    font-size: 21px;
+}
+.container_perfil h2 {
+    font-size: 25px;
+    margin: 10px;
+}
+.form_select {
+    width: 135px;
+    padding: 8px 7px;
+    color: #ffffff;
+    outline: none;
+    background: #36373a;
+    font-size: 14px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.mini, .max {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.perf_btn {
+    width: 130px;
+    padding: 8px 20px;
+    color: white;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    margin: 15px 0;
+    cursor: pointer;
+    border: #1f681f 1px solid;
+    border-radius: 5px;
+}
+
+.perf_btn.active , .perf_btn:hover{
+    background: #1f681f;
+    transition: .5s;
+}
+
 
 /* FIM PERFIL */
 /* inicio footer */

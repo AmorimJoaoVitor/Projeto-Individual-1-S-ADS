@@ -13,11 +13,12 @@
     <script src="JS/script.js"></script>
     <script type="text/javascript" src="funcoes.js"></script>
 </head>
-<script>
+<!-- <script>
     let usuario;
     verificar_autenticacao();
-</script>
-<body onload="verificar_autenticacao()">
+</script> -->
+
+<body>
     <!-- NAVBAR -->
     <nav>
         <img src="Imagens/PedaleComigoLogonovo.png" alt="Logo">
@@ -31,7 +32,7 @@
             <li><a href="" onclick="logoff()">LOGOUT</a></li>
         </ul>
 
-        
+
         <label for="check" class="checkbtn">
             <!-- label para estilizar o icone "Hamburguer", label para O INPUT "check"  -->
             <i class="fas fa-bars"></i>
@@ -39,13 +40,105 @@
         </label>
     </nav>
     <!-- Fim NAV -->
-<!-- Banner perfil -->
+    <!-- Banner perfil -->
     <section class="banner_perfil">
-        <div class="perf_title">    
-            <label class="bicicletinha" ><i class="fas fa-bicycle"></i></label> <h1>Obrigado por se unir a família dos amantes do ciclismo.</h1><label class="bicicletinha" ><i class="fas fa-bicycle"></i></label>
+        <div class="perf_title">
+            <label class="bicicletinha"><i class="fas fa-bicycle"></i></label>
+            <h1>Obrigado por se unir a família dos amantes do ciclismo.</h1><label class="bicicletinha"><i
+                    class="fas fa-bicycle"></i></label>
         </div>
         <p>Confira abaixo a melhor bicicleta para o seu perfil</p>
     </section>
     <!-- FIM BANNER PERFIL -->
+
+    <!-- Formulario perfil -->
+
+    <section class="perfil">
+        <div class="container_perfil">
+            <h2>Encontrando o melhor tamanho de bike para você</h2>
+            <p>Para as crianças a melhor bicicleta é definida pelo tamanho do Aro que pode variar entre os aros "12" e
+                "24", de acordo com a idade, peso e altura da criança</p>
+            <p>Já para os adultos o tamanho do Aro segue um padrão entre "26" e "29", sendo "26 para quem prefere uma
+                arrancada um pouco mais suave e pedaladas um pouco menos intensas, enquanto as aro "29", embora tenham
+                uma arrancada um pouco mais lenta, mas com pedaladas um pouco mais consistentes há um ganho de
+                velocidade maior.</p>
+            <p>Por isso, a opção de bicicleta mais confortável para cada perfil é medida pelo tamanho do
+                quadro(estrutura central da bicicleta), medida em centímetros </p>
+            <div class="box_perfil">
+                <h2>Preencha abaixo</h2>
+                <label for="in_tipo">Criança ou adulto?</label>
+                <select class="form_select" id="in_tipo">
+                    <option value="">-- Você é --</option>
+                    <option value="children">Criança</option>
+                    <option value="adult">Adulto</option>
+                </select>
+                <div style="display: none;" class="mini" id="infantil">
+
+                    <label for="in_idade_crianca">Idade</label>
+                    <select class="form_select" name="" id="in_idade_crianca">
+                        <option value=""></option>
+                        <option value="10">3</option>
+                        <option value="30">4 a 5</option>
+                        <option value="50">6 a 9</option>
+                        <option value="70">10 a 14</option>
+                    </select>
+                    <label for="in_altura_crianca">Altura</label>
+                    <select class="form_select" id="in_altura_crianca">
+                        <option value=""></option>
+                        <option value="10">0,89m a 1,07m</option>
+                        <option value="30">0,96m a 1,23m</option>
+                        <option value="50">1,09m a 1,42m</option>
+                        <option value="70">1,26m a 1,52m</option>
+                    </select>
+                </div>
+
+                <div style="display: none;" id="adulto">
+                    <div class="max">
+
+                        <label for="in_altura_adulto">Altura</label>
+                        <select class="form_select" id="in_altura_adulto">
+                            <option value=""></option>
+                            <option value="10">1,50m a 1,60m</option>
+                            <option value="30">1,60m a 1,70m</option>
+                            <option value="50">1,70m a 1,80m</option>
+                            <option value="70">1,80m a 1,90m</option>
+                            <option value="90"> Mais de 1,90m</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="perf_btn" onclick="ver()">Ver recomendação</button> <button class="perf_btn"
+                    onclick="limpar()">Limpar</button>
+            </div>
+            <p id="p_msg"></p>
+            <img src="" alt="bike">
+        </div>
+    </section>
+
+    <!-- Fim perfil -->
 </body>
+
 </html>
+<script>
+    document.getElementById("in_tipo").addEventListener("change", () => {
+        if (in_tipo.value == "children") {
+            infantil.style.display = "block";
+            adulto.style.display = "none";
+        } else {
+            adulto.style.display = "block";
+            infantil.style.display = "none";
+        }
+    })
+    function ver() {
+        
+    }
+
+
+    function limpar() {
+        in_tipo.value = "";
+        infantil.style.display = "none";
+        in_idade_crianca.value = "";
+        in_altura_crianca.value = "";
+        adulto.style.display = "none";
+    }
+
+</script>
