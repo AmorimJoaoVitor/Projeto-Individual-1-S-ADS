@@ -491,6 +491,43 @@ margin-top: 10px;
     width: 95px;
 }
 /* Fim cadastro */
+
+/* Inicio PERFIL */
+
+.banner_perfil {
+    width: 100%;
+    height: 545px;
+    border-bottom: #1f681f solid 3px;
+    background: rgba(0, 0, 0, 0.7) url(../Imagens/banner-perfil.jpg) scroll no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.perf_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bicicletinha {
+    font-size: 40px;
+    color: #1f681f;
+    margin: 0 10px;
+}
+.perf_title h1 {
+    font-size: 30px;
+    color: white;
+}
+.banner_perfil p {
+    color: white;
+    font-size: 20px;
+}
+
+/* FIM PERFIL */
 /* inicio footer */
 .servicos h2 {
     color: white;

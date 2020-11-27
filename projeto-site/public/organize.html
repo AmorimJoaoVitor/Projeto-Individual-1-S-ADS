@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciclismo Interativo</title>
-    <link rel="stylesheet" href="../Site/CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Laila:wght@300&family=Trispace:wght@500&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="../Site/JS/script.js"></script>
+    <script src="JS/script.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 </head>
-<body>
+<script>
+    let usuario;
+    verificar_autenticacao();
+</script>
+<body onload="verificar_autenticacao()">
     <!-- NAVBAR -->
     <nav>
-        <img src="../Site/Imagens/PedaleComigoLogonovo.png" alt="Logo">
+        <img src="Imagens/PedaleComigoLogonovo.png" alt="Logo">
         <input type="checkbox" id="check">
 
         <ul>
-            <li class="current"><a>Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="ciclistas.html">Ciclistas Famosos</a></li>
             <li><a href="autor.html">Autor</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li>Email: <b id="b_usuario"></b></li>
+            <li><a href="" onclick="logoff()">LOGOUT</a></li>
         </ul>
+
+        
         <label for="check" class="checkbtn">
             <!-- label para estilizar o icone "Hamburguer", label para O INPUT "check"  -->
             <i class="fas fa-bars"></i>
@@ -31,7 +39,13 @@
         </label>
     </nav>
     <!-- Fim NAV -->
-
-    sect
+<!-- Banner perfil -->
+    <section class="banner_perfil">
+        <div class="perf_title">    
+            <label class="bicicletinha" ><i class="fas fa-bicycle"></i></label> <h1>Obrigado por se unir a família dos amantes do ciclismo.</h1><label class="bicicletinha" ><i class="fas fa-bicycle"></i></label>
+        </div>
+        <p>Confira abaixo a melhor bicicleta para o seu perfil</p>
+    </section>
+    <!-- FIM BANNER PERFIL -->
 </body>
 </html>
