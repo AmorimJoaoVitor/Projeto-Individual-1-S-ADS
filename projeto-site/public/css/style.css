@@ -529,7 +529,6 @@ margin-top: 10px;
 .perfil {
     height: 1145px;
     width: 100%;
-    border-bottom: solid green 2px;
     display: flex;
     justify-content: center;
     color: #ffffff;
@@ -548,7 +547,7 @@ margin-top: 10px;
     width: 40%;
     border: solid #1f681f 2px;
     border-radius: 20px;
-    height: 410px;
+    height: 445px;
   
 }
 .box_perfil label {
@@ -596,6 +595,12 @@ margin-top: 10px;
 .perf_btn.active , .perf_btn:hover{
     background: #1f681f;
     transition: .5s;
+}
+.aro {
+    width: 200px;
+}
+.msg_bike{
+    text-align: center;
 }
 
 

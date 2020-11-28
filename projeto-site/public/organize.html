@@ -13,7 +13,7 @@
     <script src="JS/script.js"></script>
     <script type="text/javascript" src="funcoes.js"></script>
 </head>
-<!-- <script>
+ <!-- <script>
     let usuario;
     verificar_autenticacao();
 </script> -->
@@ -108,13 +108,36 @@
                 </div>
                 <button class="perf_btn" onclick="ver()">Ver recomendação</button> <button class="perf_btn"
                     onclick="limpar()">Limpar</button>
+                    <p class="msg_bike" id="p_msg"></p>
             </div>
-            <p id="p_msg"></p>
-            <img src="" alt="bike">
+            <img class="aro" id="img_aro" src="Imagens/" alt="bike">
         </div>
     </section>
-
     <!-- Fim perfil -->
+    <!-- Inicio footer -->
+    <footer>
+        <div class="rodape">
+            <div class="logo_rod">
+                <img src="Imagens/PedaleComigoLogonovo.png" alt="bicicleta">
+                <p>
+                    Chame a turma toda para uma pedalada.
+                </p>
+            </div>
+            <div class="sugestoes">
+                <p>
+                    registre-se para receber notificações de pedaladas e atualizações.
+                </p>
+            </div>
+            <div class="social">
+                <h5>Acesse nossas redes sociais para acompanhar as atualizações e postagens do mundo do ciclismo </h5>
+                <img src="Imagens/001-facebook.png" alt="facebook">
+                <img src="Imagens/003-instagram.png" alt="instagram">
+                <img src="Imagens/002-twitter.png" alt="twitter">
+
+            </div>
+        </div>
+    </footer>
+    <!-- Fim footer -->
 </body>
 
 </html>
@@ -129,6 +152,28 @@
         }
     })
     function ver() {
+        var pontuacao_infantil = Number(in_idade_crianca.value) + Number(in_altura_crianca.value);
+        var pontuacao_adulto = Number(in_altura_adulto.value);
+
+        if(pontuacao_infantil == 20 || pontuacao_infantil == 40){
+              img_aro.src = "Imagens/bike-aro12.jpg";
+              p_msg.innerHTML = "Bicicleta ideal : Aro 12";
+        }
+        else if (pontuacao_infantil == 60 || pontuacao_infantil == 80 ){
+            img_aro.src = "Imagens/bike-aro16.jpg";
+            p_msg.innerHTML = "Bicicleta ideal : Aro 16";
+        }
+        else if (pontuacao_infantil == 100 || pontuacao_infantil == 120){
+            img_aro.src = "Imagens/bike-aro20.jpg";
+            p_msg.innerHTML = "Bicicleta ideal : Aro 20";
+        }
+        else if (pontuacao_infantil == 140) {
+            img_aro.src = "Imagens/bike-aro24.jpg";
+            p_msg.innerHTML = "Bicicleta ideal : Aro 24";
+        }
+        else {
+            p_msg.innerHTML = "Não se esqueça de escolher as opções de todas as perguntas";
+        }
         
     }
 
@@ -139,6 +184,8 @@
         in_idade_crianca.value = "";
         in_altura_crianca.value = "";
         adulto.style.display = "none";
+        p_msg.innerHTML = "";
+        img_aro.src  = "";
     }
 
 </script>
