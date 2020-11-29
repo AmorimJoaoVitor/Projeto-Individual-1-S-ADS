@@ -13,12 +13,12 @@
     <script src="JS/script.js"></script>
     <script type="text/javascript" src="funcoes.js"></script>
 </head>
- <!-- <script>
+ <script>
     let usuario;
     verificar_autenticacao();
-</script> -->
+</script>
 
-<body>
+<body onload="verificar_autenticacao()">
     <!-- NAVBAR -->
     <nav>
         <img src="Imagens/PedaleComigoLogonovo.png" alt="Logo">
@@ -108,7 +108,7 @@
                 </div>
                 <button class="perf_btn" onclick="ver()">Ver recomendação</button> <button class="perf_btn"
                     onclick="limpar()">Limpar</button>
-                    <p class="msg_bike" id="p_msg"></p>
+                <p class="msg_bike" id="p_msg"></p>
             </div>
             <img class="aro" id="img_aro" src="Imagens/" alt="bike">
         </div>
@@ -155,28 +155,50 @@
         var pontuacao_infantil = Number(in_idade_crianca.value) + Number(in_altura_crianca.value);
         var pontuacao_adulto = Number(in_altura_adulto.value);
 
-        if(pontuacao_infantil == 20 || pontuacao_infantil == 40){
-              img_aro.src = "Imagens/bike-aro12.jpg";
-              p_msg.innerHTML = "Bicicleta ideal : Aro 12";
-        }
-        else if (pontuacao_infantil == 60 || pontuacao_infantil == 80 ){
-            img_aro.src = "Imagens/bike-aro16.jpg";
-            p_msg.innerHTML = "Bicicleta ideal : Aro 16";
-        }
-        else if (pontuacao_infantil == 100 || pontuacao_infantil == 120){
-            img_aro.src = "Imagens/bike-aro20.jpg";
-            p_msg.innerHTML = "Bicicleta ideal : Aro 20";
-        }
-        else if (pontuacao_infantil == 140) {
-            img_aro.src = "Imagens/bike-aro24.jpg";
-            p_msg.innerHTML = "Bicicleta ideal : Aro 24";
+        if (document.getElementById("infantil").style.display == "block") {
+
+            if (pontuacao_infantil == 20 || pontuacao_infantil == 40) {
+                img_aro.src = "Imagens/bike-aro12.jpg";
+                p_msg.innerHTML = "Bicicleta ideal : Aro 12";
+            }
+            else if (pontuacao_infantil == 60 || pontuacao_infantil == 80) {
+                img_aro.src = "Imagens/bike-aro16.jpg";
+                p_msg.innerHTML = "Bicicleta ideal : Aro 16";
+            }
+            else if (pontuacao_infantil == 100 || pontuacao_infantil == 120) {
+                img_aro.src = "Imagens/bike-aro20.jpg";
+                p_msg.innerHTML = "Bicicleta ideal : Aro 20";
+            }
+            else if (pontuacao_infantil == 140) {
+                img_aro.src = "Imagens/bike-aro24.jpg";
+                p_msg.innerHTML = "Bicicleta ideal : Aro 24";
+            }
+            else {
+                p_msg.innerHTML = "Não se esqueça de escolher as opções de todas as perguntas";
+            }
         }
         else {
-            p_msg.innerHTML = "Não se esqueça de escolher as opções de todas as perguntas";
+            if(pontuacao_adulto == 10){
+                p_msg.innerHTML = "Tamanho ideal do quadro para sua bicicleta é de 48cm";
+            }
+            else if(pontuacao_adulto == 30){
+                p_msg.innerHTML = "Tamanho ideal do quadro para sua bicicleta é de 50cm, 52cm e 54cm";
+            }
+            else if(pontuacao_adulto == 50){
+                p_msg.innerHTML = "Tamanho ideal do quadro para sua bicicleta é de 54cm, 55cm, 56cm";
+            }
+            else if(pontuacao_adulto == 70){
+                p_msg.innerHTML = "Tamanho ideal do quadro para sua bicicleta é de 57cm, 58cm";
+            }
+            else if(pontuacao_adulto == 90){
+                p_msg.innerHTML = "Tamanho ideal do quadro para sua bicicleta é de 60cm, 62cm";
+            }
+            else {
+                p_msg.innerHTML = "Não se esqueça de escolher as opções de todas as perguntas";
+            }
         }
-        
-    }
 
+    }
 
     function limpar() {
         in_tipo.value = "";
@@ -185,7 +207,7 @@
         in_altura_crianca.value = "";
         adulto.style.display = "none";
         p_msg.innerHTML = "";
-        img_aro.src  = "";
+        img_aro.src = "";
     }
 
 </script>
